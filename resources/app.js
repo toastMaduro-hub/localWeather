@@ -3,7 +3,7 @@ const dateEl = document.getElementById('date');
 const currentWeatherItemsEl = document.getElementById('current-weather-items');
 const timezone = document.getElementById('time-zone');
 const countryEl = document.getElementById('country');
-const weatherForecastEl = document.getElementById('weather-forecast');
+const weatherForcastEl = document.getElementById('weather-forcast');
 const currentTempEl = document.getElementById('current-temp');
 
 
@@ -92,7 +92,7 @@ function showWeatherData (data){
             `
         }else{
             otherDayForcast += `
-            <div class="weather-forecast-item">
+            <div class="weather-forcast-item">
                 <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Night - ${day.temp.night}&#176;F</div>
@@ -104,5 +104,5 @@ function showWeatherData (data){
     })
 
 
-    weatherForecastEl.innerHTML = otherDayForcast;
+    weatherForcastEl.innerHTML = otherDayForcast;
 }
